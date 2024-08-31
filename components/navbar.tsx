@@ -16,7 +16,8 @@ const Navbar = async () => {
       />
       <nav className="flex gap-3">
         <Link href={"/login"}>Login</Link>
-        <Link href={"/"}>Dashboard</Link>
+        <Link href={"/dashboard"}>Dashboard</Link>
+        <Link href={"/pricing"}>Pricing</Link>
       </nav>
     </div>
   );
