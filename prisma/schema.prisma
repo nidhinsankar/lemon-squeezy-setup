@@ -22,6 +22,14 @@ model User {
   emailVerified   DateTime?
   accounts        Account[]
   sessions        Session[]
+
+  lemonSqueezyPaymentId           String?  @unique @map(name: "payment_success_id")
+  lemonSqueezyPaymentInvoiceUrl   String?  @unique  @map(name: "invoice_url")
+  lemonSqueezyPaymentTotal        String?  
+  lemonSqueezyCustomerId          String?
+  lemonSqueezySubscriptionId      String?
+  lemonSqueezySubscriptionStatus  String?
+  lemonSqueezyPaymentRenewal      DateTime?
 }
 model Account {
   id                 String   @id @default(cuid()) @db.VarChar(30)
